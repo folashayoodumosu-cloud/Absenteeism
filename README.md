@@ -32,14 +32,17 @@ I then connected MySQL to Power BI with set parameters to create the dashboard.
 
 ## Calculation of non-smoker employees entitled to the insurance Budget of 983,221 USD
 ![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20202942.png)
+
 This equated  to 686 employees being entitled to the insurance budget, which calculated to an average of 1,433.12 USD per year for each full-time employee.
 
 ## Wire Frame
 HR provided me with a wireframe of how they would possibly like the dashboard to be presented.
+
 ![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20201654.png)
 
 ## Power BI Dashboard
 ![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20201508.png)
+
 I was able to make this dashboard dynamic to meet HR's needs so that they could determine their results
 
 **View in** [Scripts](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/scripts/absenteeism%20at%20work%20Folashayo%20Odumosu.pbix)
