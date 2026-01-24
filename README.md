@@ -8,70 +8,47 @@ And create and present it in a dashboard for greater interpretation.
 
 
 # Dataset Description
-Firstly, I had to
-determine what datasets to use and how they would provide me with insight that
-align with my objective. I selected the following:
-- The Bankstats Liquidity Metrics, which gave detailed information about bank’s
-types of high-quality liquid assets (HQLA), their mismatches in loan and
-deposit maturities, as well as the trends in deposit flows and wholesale
-funding. Since banks submitted their data at different times and updated
-information individually, the Bankstats dataset required extensive cleaning
-before it could be used accurately.
-- SONIA interest rate data served as a useful indicator for understanding of
-funding market conditions, the changes in monetary policy and how markets
-expected interest rates to move in the future. By looking at interest rate trends
-alongside liquidity data, it would be possible to spot potential links between
-changes in funding costs and how that affects how much cash banks have
-available (their liquidity position).
-- The ONS Flow-of-Funds statistics provided a wider view of the financial
-system. This data helped to reveal patterns in how money was saved per
-households, how much companies were borrowing and how different parts of
-the financial sector were possibly connected. This subsequently showed the
-paths in which risks could spread from one sector to another.
-By bringing these datasets together my analysis created a completer and more
-detailed full picture of the financial system.
+HR provided me with 3 datasets the following:
+- Absenteeism at work which contained the bulk of information about employees e.g. what month they were absent, age, bmi etc.
+- Compensation which detailed each employee's hourly rate
+- Reasons which consisted of label encoded reasons to why an employee was abseent e.g. 0 - Unknown, 1 -	Certain infectious and parasitic diseases, 2 -	Neoplasms etc.
 
-**View in** [Datasets](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/tree/main/Datasets)
+**View in** [Datasets](https://github.com/folashayoodumosu-cloud/Absenteeism/tree/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/dataset)
 
 # Results
- The main things I measured were how easily banks could pay short-term debts (Liquidity Ratio), how much SONIA rates bounced up and down (Volatility) and the total money flowing into the different sectors. I then used a tool called Prophet to estimate what SONIA and the liquidity numbers might look like over the next five years if things stayed the same.
 
-## Sonia Daily rate graph created in Python
-![image](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/blob/9475ad6c7a18fe4ac5ee1160bbe776c24a5ba555/Results/Result%20images/Sonia%20Daily%20rates.png)
+## MySQL 
+In MySQL, I was able to join all 3  tables together and calculate :
 
-## UK Banks Liquidity Ratio graph created in Python
-![image](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/blob/9475ad6c7a18fe4ac5ee1160bbe776c24a5ba555/Results/Result%20images/UK%20banks%20liquidity%20ratio.png)
+- the number of employees entitled to the healthy bonus initiative within the budget
+- the number of non-smokers entitled to the insurance Budget of 983,221 USD
 
-## Flow of Funds graph created in Python
-![image](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/blob/9475ad6c7a18fe4ac5ee1160bbe776c24a5ba555/Results/Result%20images/flow%20of%20fund.png
+I then connected MySQL to Power BI with set parameters to create the dashboard.
+**View in** [Scripts](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/scripts/Absenteeism_at_work_mysql.sql)
 
-## Liquidity ratio graph with 5 years forecasted created in Python
-![image](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/blob/9475ad6c7a18fe4ac5ee1160bbe776c24a5ba555/Results/Result%20images/liquidity%20ratio%20forecast.png)
+## Calculation of employees entitled to the healthy bonus initiative within the budget
+![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/5edfb1baac3fa95e394f6e499155721d9dcb11d9/Results/images/Screenshot%202026-01-24%20220218.png)
+111 employees based on the healthy parameters set are entitled to the bonus.
 
-## Screenshot of visualisation with analytic notes created in Power BI
-![image](https://github.com/folashayoodumosu-cloud/Financial-stability-analysis/blob/9475ad6c7a18fe4ac5ee1160bbe776c24a5ba555/Results/Result%20images/Screenshot%202026-01-22%20172731.png)
+## Calculation of non-smoker employees entitled to the insurance Budget of 983,221 USD
+![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20202942.png)
+This equated  to 686 employees being entitled to the insurance budget, which calculated to an average of 1,433.12 USD per year for each full-time employee.
 
-I calculated the liquidity ratio as Sterling divided by the sum of Loans and Other Assets.
-The flow of funds between sectors shows the movement of money within the financial system, pinpointing where systemic risks might be accumulating and indicating whether or not overall credit creation is speeding up or slowing down. These measures help forecast banks' liquidity ratios and assess how stable the sector might be.
+## Wire Frame
+HR provided me with a wireframe of how they would possibly like the dashboard to be presented.
+![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20201654.png)
 
-On the whole, my analysis found that banks maintained strong liquidity buffers.
-The sector experienced a progressive rise in reliance on wholesale funding sources which meant there is an increase in a banks' vulnerability to market fluctuations.
-Short-term funding markets were found to be increasingly responsive to changes in the Sterling Overnight Index Average (SONIA) indicating heightened sensitivity to movements in the interest rate. This means some areas warrant closer observation.
+## Power BI Dashboard
+![image](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/images/Screenshot%202026-01-24%20201508.png)
+I was able to make this dashboard dynamic to meet HR's needs so that they could determine their results
 
-My analysis identified several relationships between SONIA rates and funding markets.
-In periods in which SONIA rose quickly, larger drops in liquidity were especially pronounced among banks that were already experiencing financial weakness. The degree unto which changes in SONIA were reflected in funding rates varied from one institution to another. They can have significant implications such as allowing for the accurate forecasting of future interest rates which can help anticipate changes in funding costs or enabling more effective management of short-term borrowing and lending strategies for both individual banks and the whole sector.
+**View in** [Scripts](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/scripts/absenteeism%20at%20work%20Folashayo%20Odumosu.pbix)
 
-The analysis of the flow-of-funds provided insights into liquidity trends across different sectors. It presented that households tended to increase precautionary savings during times of heightened economic uncertainty, suggesting a shift towards greater financial conservatism.
-The financial sector itself has remained highly interconnected, meaning that stress in one area could quickly progress to other areas.
+## Reflection
+Actionable insights were able to be made and all targets were able to be met
 
-With this project I was able to conduct an assessment of the current state of the UK banking system. However, the tightening macroeconomic environment began to reveal underlying weaknesses among certain institutions leading to higher funding costs and growing liquidity challenges.
-
-# Recommendations
-Based on my findings, I would be able to suggest to enhance the robustness of the financial system. Especially for institutions that rely heavily on wholesale funding as these banks are more exposed to instability at sudden market changes.
-
-Secondly, I would suggest scenario-based risk analysis should be employed to assess institutions under varying SONIA rate conditions as this would allow for a clearer understanding of an institutions resilience to shocks in funding costs.
-
-Thirdly, I recommended that liquidity, funding and macro-financial datasets should be routinely combined for analysis.
+- For greater clarity in the future, I would add subheadings to each subsection.
+- I could've potentially added more detailed anecdotes for stakeholders who cannot attend hearing the results in a meeting manner.
 
 # Refections 
 - With more time, I would have made the dashboard more visually appealing and dynamic.
