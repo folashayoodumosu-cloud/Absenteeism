@@ -24,6 +24,7 @@ In MySQL, I was able to join all 3  tables together and calculate :
 - the number of non-smokers entitled to the insurance Budget of 983,221 USD
 
 I then connected MySQL to Power BI with set parameters to create the dashboard.
+
 **View in** [Scripts](https://github.com/folashayoodumosu-cloud/Absenteeism/blob/26be69ada4c118757fc15a9d5ae0eaaeffa3abeb/Results/scripts/Absenteeism_at_work_mysql.sql)
 
 ## Calculation of employees entitled to the healthy bonus initiative within the budget
